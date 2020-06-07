@@ -5,13 +5,13 @@
     "reactshoppe-api": "bin/reactshoppe-api.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run build:webpack",
+    "build:webpack": "webpack --config packages/functions/webpack.config.js --display-error-details",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
     "bootstrap": "lerna bootstrap",
-    "copy:reactshoppe-database": "cp -rv ./packages/reactshoppe-database ./packages/functions/node_modules",
-    "deploy": "npm run bootstrap && npm run copy:reactshoppe-database && cdk deploy"
+    "deploy": "npm run bootstrap && npm run build && cdk deploy"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.44.0",
@@ -22,7 +22,9 @@
     "lerna": "^3.22.0",
     "ts-jest": "^25.3.1",
     "ts-node": "^8.1.0",
-    "typescript": "~3.7.2"
+    "typescript": "~3.7.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "@aws-cdk/aws-apigateway": "^1.44.0",
