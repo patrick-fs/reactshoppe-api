@@ -1,6 +1,7 @@
 import * as core from '@aws-cdk/core';
 import * as iam from '@aws-cdk/aws-iam';
 import * as dynamodb from '@aws-cdk/aws-dynamodb';
+import { TableNames } from './TableNames' 
 
 export class ReactshoppeDatabase extends core.Construct {
   private orderTable: dynamodb.Table;
@@ -20,8 +21,4 @@ export class ReactshoppeDatabase extends core.Construct {
   allowCrud(grantee: iam.IGrantable) {
     this.orderTable.grantReadWriteData(grantee);
   }
-};
-
-export enum TableNames {
-    Order = 'Order'
 };
