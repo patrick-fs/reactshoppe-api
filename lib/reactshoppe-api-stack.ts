@@ -7,7 +7,9 @@ export class ReactshoppeApiStack extends cdk.Stack {
     super(scope, id, props);
 
     // The code that defines your stack goes here
-    new ReactshoppeDatabase(this, 'ReactshoppeDatabase');
-    new ReactshoppeApi(this, 'ReactshoppeApi');
+    const api = new ReactshoppeApi(this, 'ReactshoppeApi');
+    const db = new ReactshoppeDatabase(this, 'ReactshoppeDatabase');
+
+    db.allowCrud(api.getHandler());
   }
 }
