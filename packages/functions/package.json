@@ -1,0 +1,10 @@
+{
+  "name": "functions",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AWS Lambda function source code",
+  "author": "Patrick Brandt <patrick@fullstory.com>",
+  "homepage": "https://github.com/patrick-fs/reactshoppe-api/packages/functions#readme",
+  "license": "ISC",
+  "main": "lib/functions.js"
+}

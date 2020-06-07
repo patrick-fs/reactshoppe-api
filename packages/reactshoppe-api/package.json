@@ -1,0 +1,10 @@
+{
+  "name": "reactshoppe-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "API Gateway Constructs",
+  "author": "Patrick Brandt <patrick@fullstory.com>",
+  "homepage": "https://github.com/patrick-fs/reactshoppe-api/packages/reactshoppe-api#readme",
+  "license": "ISC",
+  "main": "lib/reactshoppe-api.js"
+}
