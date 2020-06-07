@@ -8,7 +8,8 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "bootstrap": "lerna bootstrap"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.44.0",
@@ -28,6 +29,9 @@
     "@aws-cdk/core": "1.44.0",
     "@types/aws-lambda": "^8.10.53",
     "aws-lambda": "^1.0.6",
-    "source-map-support": "^0.5.16"
+    "source-map-support": "^0.5.16",
+    "functions": "file:packages/functions",
+    "reactshoppe-api": "file:packages/reactshoppe-api",
+    "reactshoppe-database": "file:packages/reactshoppe-database"
   }
 }
