@@ -9,7 +9,9 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap",
+    "copy:reactshoppe-database": "cp -rv ./packages/reactshoppe-database ./packages/functions/node_modules",
+    "deploy": "npm run bootstrap && npm run copy:reactshoppe-database && cdk deploy"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.44.0",
