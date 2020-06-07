@@ -1,7 +1,7 @@
 import { APIGatewayProxyEvent } from 'aws-lambda';
 import * as AWS from 'aws-sdk';
 import { v4 as uuidv4 } from 'uuid';
-import { TableNames } from '../reactshoppe-database';
+import { TableNames } from '../reactshoppe-database/reactshoppe-database';
 import { success, failure } from './response';
 
 export default async (event: APIGatewayProxyEvent) => {

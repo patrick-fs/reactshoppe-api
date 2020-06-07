@@ -9,7 +9,7 @@ export class ReactshoppeApi extends core.Construct {
 
     this.handler = new lambda.Function(this, 'ApiHandler', {
       runtime: lambda.Runtime.NODEJS_10_X,
-      code: lambda.Code.fromAsset('./lib/functions'), // this path is relative to the project root
+      code: lambda.Code.fromAsset('./packages/functions'), // this path is relative to the project root
       handler: 'index.main',
     });
 

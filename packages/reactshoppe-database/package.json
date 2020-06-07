@@ -6,5 +6,5 @@
   "author": "Patrick Brandt <patrick@fullstory.com>",
   "homepage": "https://github.com/patrick-fs/reactshoppe-api/packages/reactshoppe-database#readme",
   "license": "ISC",
-  "main": "lib/reactshoppe-database.js"
+  "main": "reactshoppe-database.js"
 }

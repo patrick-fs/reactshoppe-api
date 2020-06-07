@@ -6,5 +6,9 @@
   "author": "Patrick Brandt <patrick@fullstory.com>",
   "homepage": "https://github.com/patrick-fs/reactshoppe-api/packages/functions#readme",
   "license": "ISC",
-  "main": "lib/functions.js"
+  "main": "index.js",
+  "dependencies": {
+    "@types/uuid": "^8.0.0",
+    "uuid": "^8.1.0"
+  }
 }
