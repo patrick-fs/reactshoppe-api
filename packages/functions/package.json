@@ -8,7 +8,9 @@
   "license": "ISC",
   "main": "index.js",
   "dependencies": {
+    "@types/newrelic": "^6.4.0",
     "@types/uuid": "^8.0.0",
+    "newrelic": "^6.8.0",
     "uuid": "^8.1.0"
   }
 }

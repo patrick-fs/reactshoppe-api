@@ -9,7 +9,9 @@ module.exports = {
   },
   context: path.resolve(__dirname),
   entry: './index.js',
-  externals: ['aws-sdk', 'aws-lambda'],
+  // aws-sdk and aws-lambda are available in the AWS Lambda runtime environment
+  // newrelic is a binary and can't be bundled
+  externals: ['aws-sdk', 'aws-lambda', 'newrelic'],
   output: {
     libraryTarget: 'commonjs',
     filename: 'entrypoint.js',
