@@ -10,7 +10,7 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna link && lerna exec -- npm i",
     "deploy": "npm run bootstrap && npm run build && cdk deploy"
   },
   "devDependencies": {
