@@ -10,6 +10,7 @@ export class ReactshoppeApiStack extends cdk.Stack {
     const api = new ReactshoppeApi(this, 'ReactshoppeApi');
     const db = new ReactshoppeDatabase(this, 'ReactshoppeDatabase');
 
+    // commenting this out will deliberately break service for New Relic demo
     db.allowCrud(api.getHandler());
   }
 }

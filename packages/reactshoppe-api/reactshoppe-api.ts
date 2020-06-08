@@ -1,6 +1,7 @@
 import { Cors, LambdaRestApi } from '@aws-cdk/aws-apigateway';
 import * as core from '@aws-cdk/core';
 import * as lambda from '@aws-cdk/aws-lambda';
+import { headers } from 'functions/response';
 
 export class ReactshoppeApi extends core.Construct {
   private handler: lambda.Function;
@@ -19,6 +20,7 @@ export class ReactshoppeApi extends core.Construct {
       defaultCorsPreflightOptions: {
         allowMethods: Cors.ALL_METHODS,
         allowOrigins: Cors.ALL_ORIGINS,
+        allowHeaders: headers,
       }
     });
   }

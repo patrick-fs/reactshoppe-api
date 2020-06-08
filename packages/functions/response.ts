@@ -1,5 +1,16 @@
+export const fullstoryHeader = 'X-FullStory-URL';
+
+export const headers = [fullstoryHeader,
+  'Content-Type',
+  'X-Amz-Date',
+  'Authorization',
+  'X-Api-Key',
+  'X-Amz-Security-Token',
+  'X-Amz-User-Agent'];
+
 const corsHeaders = {
-  'Content-Type': 'application/json', 
+  'Content-Type': 'application/json',
+  'Access-Control-Allow-Headers': headers.join(','),
   'Access-Control-Allow-Methods': '*',
   'Access-Control-Allow-Origin': '*',
 };
