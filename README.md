@@ -1,14 +1,9 @@
-# Welcome to your CDK TypeScript project!
+# The Reactshoppe API
 
-This is a blank project for TypeScript development with CDK.
+![image](https://user-images.githubusercontent.com/45576380/85132916-be925e00-b207-11ea-8f70-a3cd7a49e1e3.png)
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+### Built with...
 
-## Useful commands
-
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+- The AWS CDK
+- Lerna
+- Webpack
