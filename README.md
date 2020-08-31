@@ -7,3 +7,7 @@
 - The AWS CDK
 - Lerna
 - Webpack
+
+To get up and running:
+
+`npm install` then `npx lerna bootstrap` then `npm run build` then `npx cdk synth`

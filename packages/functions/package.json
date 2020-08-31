@@ -9,6 +9,7 @@
   "main": "index.js",
   "dependencies": {
     "@types/uuid": "^8.0.0",
+    "reactshoppe-database": "^0.1.0",
     "uuid": "^8.1.0"
   }
 }
