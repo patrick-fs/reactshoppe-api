@@ -6,5 +6,9 @@
   "author": "Patrick Brandt <patrick@fullstory.com>",
   "homepage": "https://github.com/patrick-fs/reactshoppe-api#readme",
   "license": "ISC",
-  "main": "lib/stack.js"
+  "main": "reactshoppe-api-stack.js",
+  "dependencies": {
+    "reactshoppe-api": "^0.0.0",
+    "reactshoppe-database": "^0.0.0"
+  }
 }
