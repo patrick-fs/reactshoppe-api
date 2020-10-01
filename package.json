@@ -8,7 +8,9 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "bootstrap": "lerna bootstrap",
+    "deploy": "npm run bootstrap && npm run build && cdk deploy"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.44.0",
