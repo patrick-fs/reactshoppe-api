@@ -7,24 +7,23 @@ import { success, failure } from './response';
 export default async (event: APIGatewayProxyEvent) => {
   const ddb = new AWS.DynamoDB.DocumentClient();
   let newOrder = {};
+  // NOTE: in a real application, we’d do more to validate input
   if (event.body != null) {
-    const body = JSON.parse(event.body);
-    newOrder = {
+    const { products, userId } = JSON.parse(event.body);
+    const ddb = new AWS.DynamoDB.DocumentClient();
+    const newOrder = {
       id: uuidv4(),
-      products: body.products,
-      billingInfo: body.billingInfo,
+      products,
+      userId,
     };
     try {
-      const result = await ddb.put({
+      await ddb.put({
         TableName: TableNames.Order,
         Item: newOrder
-      }).promise();
-      
-      const body = JSON.stringify(result.$response.data);
-      console.log(`successful ddb request: ${body}`);
-  
-      return success(body);
-  
+      }).promise();      
+
+      return success(JSON.stringify(newOrder));
+
     } catch (error) {
       const body = error.stack || JSON.stringify(error, null, 2);
       return failure(body);
