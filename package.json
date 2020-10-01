@@ -5,7 +5,8 @@
     "reactshoppe-api": "bin/reactshoppe-api.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run build:webpack",
+    "build:webpack": "webpack --config packages/functions/webpack.config.js --display-error-details",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
@@ -21,7 +22,9 @@
     "lerna": "^3.22.0",
     "ts-jest": "^25.3.1",
     "ts-node": "^8.1.0",
-    "typescript": "~3.7.2"
+    "typescript": "~3.7.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "@aws-cdk/aws-apigateway": "^1.44.0",
