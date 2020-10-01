@@ -1,6 +1,6 @@
 import * as cdk from '@aws-cdk/core';
-import { ReactshoppeDatabase } from './reactshoppe-database';
-import { ReactshoppeApi } from './reactshoppe-api';
+import { ReactshoppeDatabase } from '../reactshoppe-database/reactshoppe-database';
+import { ReactshoppeApi } from '../reactshoppe-api/reactshoppe-api';
 
 export class ReactshoppeApiStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
