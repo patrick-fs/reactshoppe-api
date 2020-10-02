@@ -10,6 +10,6 @@ export class ReactshoppeApiStack extends cdk.Stack {
     const api = new ReactshoppeApi(this, 'ReactshoppeApi');
     const db = new ReactshoppeDatabase(this, 'ReactshoppeDatabase');
 
-    db.allowCrud(api.getHandler());
+    db.allowCrud(api.handler);
   }
 }
