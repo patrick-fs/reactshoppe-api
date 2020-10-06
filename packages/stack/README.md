@@ -1,11 +1,3 @@
-# `stack`
+# stack
 
-> TODO: description
-
-## Usage
-
-```
-const stack = require('stack');
-
-// TODO: DEMONSTRATE API
-```
+> An AWS CDK Stack definition that deploys a basic API Gateway + DynamoDB + AWS Lambda serverless API

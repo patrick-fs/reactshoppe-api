@@ -1,11 +1,3 @@
-# `functions`
+# functions
 
-> TODO: description
-
-## Usage
-
-```
-const functions = require('functions');
-
-// TODO: DEMONSTRATE API
-```
+> AWS Lambda functions that handle HTTP requests received by the API frontend created via the `reactshoppe-api` AWS CDK Construct.

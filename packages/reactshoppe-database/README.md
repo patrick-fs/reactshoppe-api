@@ -1,11 +1,3 @@
-# `reactshoppe-database`
+# reactshoppe-database
 
-> TODO: description
-
-## Usage
-
-```
-const reactshoppeDatabase = require('reactshoppe-database');
-
-// TODO: DEMONSTRATE API
-```
+> An AWS CDK Construct that defines an DynamoDB table for storing the results of a `POST /checkout` request.
