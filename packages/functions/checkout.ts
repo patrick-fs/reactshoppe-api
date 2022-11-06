@@ -23,8 +23,9 @@ export default async (event: APIGatewayProxyEvent) => {
     return success(body);
 
   } catch (error) {
-    noticeError(error); // if this isn't here, an error isn't reported in NR
-    const body = error.stack || JSON.stringify(error, null, 2);
+    const e = error as Error;
+    noticeError(e); // if this isn't here, an error isn't reported in NR
+    const body = e.stack || JSON.stringify(error, null, 2);
     return failure(body);
   }
 };

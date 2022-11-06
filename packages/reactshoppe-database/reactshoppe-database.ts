@@ -1,11 +1,10 @@
-import * as core from '@aws-cdk/core';
-import * as iam from '@aws-cdk/aws-iam';
-import * as dynamodb from '@aws-cdk/aws-dynamodb';
+import { RemovalPolicy, aws_dynamodb as dynamodb, aws_iam as iam } from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 import { TableNames } from './TableNames' 
 
-export class ReactshoppeDatabase extends core.Construct {
+export class ReactshoppeDatabase extends Construct {
   private orderTable: dynamodb.Table;
-  constructor(scope: core.Construct, id: string) {
+  constructor(scope: Construct, id: string) {
     super(scope, id);
 
     this.orderTable = new dynamodb.Table(this, TableNames.Order, {
@@ -14,7 +13,7 @@ export class ReactshoppeDatabase extends core.Construct {
       readCapacity: 1,
       writeCapacity: 1,
       tableName: TableNames.Order,
-      removalPolicy: core.RemovalPolicy.DESTROY,
+      removalPolicy:RemovalPolicy.DESTROY,
     });
   }
 
